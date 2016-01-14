@@ -1,19 +1,7 @@
-# hello-world-clj
+# Heroku Clojure Proxy Sample
 
-FIXME
-
-## Prerequisites
-
-You will need [Leiningen][] 2.0.0 or above installed.
-
-[leiningen]: https://github.com/technomancy/leiningen
-
-## Running
-
-To start a web server for the application, run:
-
-    lein ring server
+This app demonstrates how to use the Heroku Proxy add-ons in Java.
 
 ## License
 
-Copyright © 2016 FIXME
+MIT
