@@ -15,7 +15,9 @@
       {:proxy-host (.getHost proxy-uri)
        :proxy-port (.getPort proxy-uri)
        :headers {
-         "Proxy-Authorization" (str "Basic " (base64/encode (.getUserInfo proxy-uri)))}})))
+         "Proxy-Authorization"
+         (str "Basic " (.encode (sun.misc.BASE64Encoder.)
+           (.getBytes (.getUserInfo proxy-uri))))}})))
 
 (defroutes app-routes
   (GET "/quota-guard" [] (get-quota-guard))
